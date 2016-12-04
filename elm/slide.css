@@ -1,0 +1,53 @@
+*{
+	margin:0;
+	padding:0;
+}
+.slide-all{
+	position:relative;
+	width:1180px;
+	height:98px;
+	margin:0 auto;
+}
+#slide{
+	width:1180px;
+	height:98px;
+	/*margin:0 auto;*/
+	margin-top:20px;
+	position:relative;
+	overflow: hidden;
+}
+.photo{
+	width:1180px;
+	height:294px;
+}
+.photo li{
+	width:1180px;
+	height:98px;
+}
+#btn{
+	width:70px;
+	position:absolute;
+	margin-left:1100px;
+	margin-top:-25px;
+}
+#btn li{
+    display: inline-block;
+    list-style: none;
+    width:18px;
+    height:18px;
+    line-height: 19px;
+    background-color:#fff;
+    opacity:0.8;
+    color:#D37709;
+    text-align: center;
+    cursor: pointer;
+    font-weight:bold;
+}
+#btn li.showBtn{
+	background-color:#D37709;
+    color:#fff;
+}
+#btn li:hover{
+	background-color:#D37709;
+    color:#fff;
+}

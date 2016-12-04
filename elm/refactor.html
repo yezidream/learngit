@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+	<title>重构页面</title>
+	<link rel="stylesheet" type="text/css" href="refactor.css">
+     <link rel="stylesheet" type="text/css" href="slide.css">
+</head>
+<body>
+    <!-- 导航开始 -->
+    <div class="navigation">
+          <a href="JavaScript:" class="brand">饿了么</a>
+     	  <ul class="nav_one">
+     	 	 <li>
+     	 		<a href="JavaScript:">首页</a>
+     	 	 </li>
+     	 	 <li>
+     	 		<a href="JavaScript:">我的订单</a>
+     	 	</li>
+     	 	<li>
+     	 		<a href="JavaScript:">加盟合作</a>
+     	 	 </li>
+     	    </ul>
+     	  <ul class="nav_two">
+     	 	 <li>
+     	 		<a href="JavaScript:">积分商城</a>
+     	 	 </li>
+     	 	 <li class="service">
+     	 		<a href="JavaScript:">服务中心</a>
+     	 	 </li>
+     	 	 <li>
+     	 		<a href="JavaScript:">手机应用
+            <span class="sweep">
+               <span class="word">扫一扫,手机订餐更方便</span><br/>
+               <img src="img/code.png">
+            </span>
+          </a>
+     	 	 </li>
+     	  </ul>
+     	  <a href="JavaScript:" class="login_register">登录/注册</a>
+     </div><!-- 导航结束 -->
+     <!-- 内容开始 -->
+     <div class="content">
+       <span class="now">当前位置:</span>
+       <span class="address"><a href="JavaScript:">闵行区上海交通大学(闵行校区)内</a></span>
+       <a href="JavaScript:" class="change">[切换地址]</a>
+       <span class="search_total">
+          <input type="text" placeholder="搜索商家,美食..." class="search" />
+          <a href="JavaScript:" class="search_img"></a>
+       </span>
+       <!-- 图片轮播开始 -->
+       <div class="slide-all">
+     <div  id="slide">
+       <ul   class="photo" id="pht" style="margin-top:0px">
+          <li><a href="#"><img src="img/slide1.png"></a></li>
+          <li><a href="#"><img src="img/slide2.png"></a></li>
+          <li><a href="#"><img src="img/slide3.png"></a></li>
+       </ul>
+      </div>
+         <ul id="btn">
+            <li index="1" class="showBtn">1</li>
+            <li index="2">2</li>
+            <li index="3">3</li>
+          </ul>
+       </div><!-- 图片轮播结束 -->
+       <!-- 外卖图片开始 -->
+       <div><img src="img/eleme.png" class="eleme" /><div>
+       <!-- 外卖图片结束-->
+       <!-- 商家分类开始 -->
+       <ul class="classify">
+       	  <li><a href="JavaScript:">商家分类:</a></li>
+       	  <li class="all_store_title"><a href="JavaScript:">全部商家</a></li>
+       	  <li>
+       	  	<ul class="all_store">
+       	  		<li><a href="JavaScript:">品牌商家</a></li>
+       	  		<li><a href="JavaScript:">快餐便当</a></li>
+       	  		<li><a href="JavaScript:">特色菜系</a></li>
+       	  		<li><a href="JavaScript:">异国料理</a></li>
+       	  		<li><a href="JavaScript:">小吃夜宵</a></li>
+       	  		<li><a href="JavaScript:">甜品饮品</a></li>
+       	  		<li><a href="JavaScript:">果蔬生鲜</a></li>
+       	  		<li><a href="JavaScript:">鲜花蛋糕</a></li>
+       	  		<li><a href="JavaScript:">商店超市</a></li>
+       	  	</ul>
+       	  </li>
+       </ul><!-- 商家分类结束 -->
+       <!-- 查看附近开始 -->
+       <p class="view">
+       	 <span>想吃好点的，看看附近<span class="num">7</span><span class="family">家</span>品牌商家吧，</span>
+       	 <a href="JavaScript:">立即查看</a>
+       </p>
+       <!-- 查看附近结束 -->
+       <!-- 商家列表开始 -->
+        <ul class="store_list">
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span  class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span class="evaluate">☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送 / 配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span  class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span>☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送&nbsp/&nbsp配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span>☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送&nbsp/&nbsp配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span class="evaluate">☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送&nbsp/&nbsp配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span>☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送&nbsp/&nbsp配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span  class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span class="evaluate">☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送 / 配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span  class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span>☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送&nbsp/&nbsp配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span>☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送&nbsp/&nbsp配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span class="evaluate">☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送&nbsp/&nbsp配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span>☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送&nbsp/&nbsp配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span  class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span class="evaluate">☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送 / 配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span  class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span>☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送&nbsp/&nbsp配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span>☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送&nbsp/&nbsp配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span class="evaluate">☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送&nbsp/&nbsp配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span>☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送&nbsp/&nbsp配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span  class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span class="evaluate">☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送 / 配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span  class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span>☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送&nbsp/&nbsp配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span>☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送&nbsp/&nbsp配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span class="evaluate">☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送&nbsp/&nbsp配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          	<li>
+          		<a href="JavaScript:">
+          		    <span class="photo">
+          			   <img src="img/store3.png" />
+          			   <span>31分钟</span>
+          			</span>
+          			<span class="message">
+          				<span class="store_name">
+          				     <strong>土老帽黄焖鸡米饭(广南店)</strong>
+          				</span><br/>
+          			    <span>☆☆☆☆☆</span><span class="result">月售104单</span><br/>
+          				<span>30元起送&nbsp/&nbsp配送费2元</span><br/>
+          				<span class="ensure">保</span><span class="ticket">票</span>
+          			</span>
+          		</a>
+          	</li>
+          </ul>
+          <p class="more_store"><a href="JavaScript:">点击加载更多商家...</a></p>
+          <!-- 商家列表结束 -->
+     </div><!-- 内容结束 -->
+
+     <!-- 底部开始 -->
+     <div class="footer">
+     	<ul>
+     		<li>
+     			<a href="JavaScript:">用户帮助</a><br/>
+     			<a href="JavaScript:">服务中心</a><br/>
+     			<a href="JavaScript:">常见问题</a><br/>
+     			<a href="JavaScript:">在线客服</a><br/>
+     		</li>
+     		<li>
+     			<a href="JavaScript:">商务合作</a><br/>
+     			<a href="JavaScript:">我要开店</a><br/>
+     			<a href="JavaScript:">加盟指南</a><br/>
+     			<a href="JavaScript:">市场合作</a><br/>
+     			<a href="JavaScript:">开放平台</a><br/>
+     		</li>
+     		<li>
+     			<a href="JavaScript:">关于我们</a><br/>
+     			<a href="JavaScript:">饿了么介绍</a><br/>
+     			<a href="JavaScript:">加入我们</a><br/>
+     			<a href="JavaScript:">联系我们</a><br/>
+     			<a href="JavaScript:">服务协议</a><br/>
+     		</li>
+     		<li class="contact">
+     			<span>24小时客服热线 : 10105757</span><br/>
+     			<span>意见反馈 : feedback@ele.me</span><br/>
+     			<span>关注我们 :</span>
+     			<a href="JavaScript:" class="webchat"></a>
+     			<a href="JavaScript:" class="weibo"></a>
+     		</li>
+     		<li>
+     		   <span class="explain">
+     			   <span class="download">下载手机版</span><br/>
+                   <span>扫一扫,手机订餐方便</span>
+               </span>
+     		</li>
+     	</ul>
+     	<p class="basic_message">增值电信业务许可证 : 沪B2-20150033 | 沪ICP备 09007032 | 上海工商行政管理 Copyright ©2008-2016 ele.me, All Rights Reserved.</p>
+     	<img src="img/icon.png" />
+     </div>
+     <!-- 底部结束 -->
+     <!-- 侧栏1开始 -->
+     <div class="sidebar">
+     	 <a href="JavaScript:" class="order"><span class="order1">我的订单</span></a>
+     	 <i></i>
+     	 <a href="JavaScript:" class="shopping"><span>购物车</span></a>
+     	 <i></i>
+     	 <a href="JavaScript:" class="letter"><span class="letter1">我的信息</span></a>
+     	 <a href="JavaScript:" class="code1">
+         <span class="code2">
+            <img src="img/code.png" /><br/>
+            <span class="down">下载手机应用</span><br/>
+            <span class="share">即可参加分享红包活动</span>
+          </span>
+       </a>
+       <a href="JavaScript:" class="search"><span class="search1">在线客服</span></a>
+     	 <a href="JavaScript:" class="top"><span class="top1">返回顶部</span></a>
+     </div><!-- 侧栏1结束 -->
+     <script type="text/javascript" src="slide.js"></script>
+</body>
+</html>
