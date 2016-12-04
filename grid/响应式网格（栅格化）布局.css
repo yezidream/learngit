@@ -1,0 +1,55 @@
+body{
+	padding:0;
+	margin:0;
+}
+.row{
+	padding-right:20px;
+}
+.row:before,
+.row:after{
+   content:"";
+   display:table;
+   clear:both;
+}
+[class*="col-"]{ /*类名中有col-前缀的全部类*/
+	float:left;
+	width:16.666%;
+	height:50px;
+	background-color: #eee;
+	margin:20px 0 0 20px;
+	outline: 1px solid #999; /*与border用法类似,区别：outline不会占据空间，border会占据空间*/
+}
+@media(min-width:769px){ /*当宽度超过768px时*/   
+   .col-md-1{                     /* calc为一个函数，用来计算，不用知道具体的宽度*/
+   	  width:calc(8.3333% - 20px); /*减20px是因为向左移动20px,减少了空间*/
+   }
+   .col-md-2{
+   	  width:calc(16.666% - 20px);
+   }
+   .col-md-3{
+   	  width:calc(25% - 20px);
+   }
+   .col-md-4{
+   	  width:calc(33.333% - 20px);
+   }
+   .col-md-6{
+   	  width:calc(50% - 20px);
+   }
+}
+@media(max-width:768px){
+   .col-sm-2{
+   	  width:calc(16.666% - 20px);
+   }
+   .col-sm-3{
+   	  width:calc(25% - 20px);
+   }
+   .col-sm-6{
+   	  width:calc(50% - 20px);
+   }
+   .col-sm-8{
+   	  width:calc(66.666% - 20px);
+   }
+   .col-sm-12{
+   	  width:calc(100% - 20px);
+   }
+}
