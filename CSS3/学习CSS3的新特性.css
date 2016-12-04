@@ -1,0 +1,101 @@
+*{
+	padding:0;
+	margin:0;
+}
+/*排名*/
+ul{
+	margin-left: 20px;
+	font-family: "Microsoft Yahei";
+}
+ul li{
+	list-style:none;
+}
+ul li ul li{
+	list-style: none;
+	display:inline-block;
+	width:40px;
+	height:20px;
+	line-height: 20px;
+}
+ul li:nth-child(2n+1) ul li{
+   background-color: #CCCCCC;
+}
+ul li:nth-child(2) ul li,
+ul li:nth-child(3) ul li,
+ul li:nth-child(4) ul li{
+   color:red;
+}
+ul li:first-child ul li{
+	background-color: black;
+	color:white;	
+}
+ul li ul li:nth-child(2){
+   width:150px;
+}
+
+/*宽度长短变化*/
+input{
+   margin-top: 30px;
+   margin-left: 40px;
+   outline:none;
+   width:100px;
+   height:20px;
+   transition: 0.5s width;
+}
+input:focus{
+	width:200px;
+}
+
+/*图轮播*/
+.img-turn{
+	position:relative;  /*定位为相对定位*/
+	overflow:hidden;    /*将超出的部分隐藏*/
+	width:300px;
+	margin-top: 50px;
+	margin-left: -20px;
+}
+.change{
+	width:300%;    /*一共有三个li,每个li的width为100%*/
+	position:relative;   
+	left:0;
+	transition:0.5s left;  /*渐变速度与方向*/
+	font-size:0;     /*为什么需要设置字体大小为0？？？？？？*/
+}
+.change li{
+	width:300px;  /*充满父元素*/
+	height:100px;
+	display: inline-block;
+}
+.change li:nth-child(1){
+	background-color: #00FF00;
+}
+.change li:nth-child(2){
+	background-color: #0000FF;
+}
+.change li:nth-child(3){
+	background-color: #FF0000;
+}
+.control{
+	position:absolute; /*定义为绝对定位*/
+	right:0;    /*将其放在右下角*/
+	bottom:0;
+}
+.control a{
+	text-decoration: none;
+	display:inline-block;
+	width:30px;
+	height:20px;
+	line-height: 20px;
+	text-align:center;
+	opacity:0.5;
+	background-color:#fff;
+}
+#img-one:target~.change{
+	left:0;
+}
+#img-two:target~.change{
+	left:-100%;
+}
+#img-threen:target~.change{
+	left:-200%;
+}
