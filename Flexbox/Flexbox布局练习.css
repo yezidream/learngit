@@ -1,0 +1,58 @@
+*{
+	padding:20px;
+	margin:0px;
+}
+.flex,
+.flex > div{
+   box-sizing:border-box;
+}
+.flex{
+	border:1px solid gray;
+	display: flex;  /*弹性显示*/
+	display: -webkit-flex;
+	display:-ms-flexbox;
+	justify-content:space-between;  /*显示排列的方式*/
+	-webkit-justify-content:space-between;
+	-ms-flex-pack:justify;
+	align-items:center;  /*排列居中*/
+	-webkit-align-items:center;
+    -ms-flex-align:center;
+    flex:none;  /*没有扩展能力*/
+    -webkit-flex:none;
+    -ms-flex:none;
+}
+@media all and (max-width:640px){
+    .flex-item4{
+    	order:-1;  /*显示在最前面*/
+    	-webkit-order:-1;
+    	-ms-order:-1;
+    }
+    .flex{
+    	flex-wrap:wrap; /* 多行显示*/
+    	-webkit-flex-wrap:wrap;
+    	-ms-flex-wrap:wrap;
+    	align-items:flex-start;  /*顶部对齐显示*/
+	    -webkit-align-items:flex-start;
+        -ms-flex-align:flex-start;
+    }
+}
+.flex div{
+	width:150px;
+	border:1px solid red;
+	display: inline-block;
+	padding:0px;
+	margin-bottom: 20px;
+} 
+.flex-item1{
+   height:120px;
+}
+.flex-item2{
+   height:100px;
+}
+.flex-item3{
+   height:40px;
+}
+.flex .flex-item4{
+   height:200px;
+   border:1px solid blue;
+}
