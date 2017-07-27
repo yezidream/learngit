@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>时间插件</title>
+    <style type="text/css">
+      #ago,
+      #future{
+          cursor:pointer;
+       }
+       #show{
+       	   display:inline-block;
+       	   width:150px;
+       	   height:50px;
+       	   border:1px solid #ccc;
+       	   text-align: center;
+       }
+    </style>
+</head>
+<body>
+     <span id = "ago">向前</span>
+     <span id = "show">
+         <span id="timeShow"></span></br>
+         <span id="dayShow"></span>
+     </span>
+     <span id = "future">向后</span>
+     <script type="text/javascript">
+          function getTime(){
+               var ago = document.getElementById("ago");
+               var future = document.getElementById("future");
+               var show = document.getElementById("show");
+               var timeShow = document.getElementById("timeShow");
+               var dayShow = document.getElementById("dayShow");
+               //获取当前日期（年月日星期）
+               var myDate = new Date();
+               var year = myDate.getFullYear();
+               var month = myDate.getMonth() + 1;
+               var date = myDate.getDate(); 
+               var day = myDate.getDay(); 
+               var dayEn; //星期的英文缩写
+               var dayEgArr = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]  //全部星期的英文缩写
+               var monthArr = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"] //全部的月份缩写
+               //将星期转换成英文缩写
+               if(day == 0){
+                    dayEn = "Sun";
+               }else if(day == 1){
+                    dayEn = "Mon";
+               }else if(day == 2){
+                    dayEn = "Tue";
+               }else if(day == 3){
+                    dayEn = "Wed";
+               }else if(day == 4){
+                    dayEn = "Thu";
+               }else if(day == 5){
+                    dayEn = "Fri";
+               }else if(day == 6){
+                    dayEn = "Sat";
+               }
+               monthEg = monthArr[month-1];//将月份转化成英文缩写
+               var time = date + "." + monthEg + "." + year;
+               //将时间显示在页面
+               timeShow .innerHTML = time;
+               dayShow .innerHTML = dayEn;
+               //获取当前页面的时间
+               var timeSh = timeShow .innerHTML;
+               var daySh = dayShow .innerHTML;
+               var arrTimeSh = timeSh.split(".");
+               var dateSh = arrTimeSh[0];
+               var monthSh = arrTimeSh[1];
+               //将英文缩写的月份转化成数字
+               if(monthSh == "Jan"){
+                   monthSh = 1;
+               }else if(monthSh == "Feb"){
+                   monthSh = 2;
+               }else if(monthSh == "Mar"){
+                   monthSh = 3;
+               }else if(monthSh == "Apr"){
+                   monthSh = 4;
+               }else if(monthSh == "May"){
+                   monthSh = 5;
+               }else if(monthSh == "Jun"){
+                   monthSh = 6;
+               }else if(monthSh == "Jul"){
+                   monthSh = 7;
+               }else if(monthSh == "Aug"){
+                   monthSh = 8;
+               }else if(monthSh == "Sep"){
+                   monthSh = 9;
+               }else if(monthSh == "Oct"){
+                   monthSh = 10;
+               }else if(monthSh == "Nov"){
+                   monthSh = 11;
+               }else if(monthSh == "Dec"){
+                   monthSh = 12;
+               }
+               var yearSh = arrTimeSh[2];
+               daySh = dayShow .innerHTML; 
+               //时间往后改变
+               function getFutureTime(){
+               	    future.onclick = function(){
+               	         //判断月份与日期是否处于临界点
+                         if(monthSh == 12 && dateSh == 31 ){
+                         	 yearSh++;
+                         	 mobthSh = 1;
+                         	 dateSh = 0;
+                         }else if(monthSh == 1 || monthSh == 3 || monthSh == 5||
+                         	   monthSh == 7 || monthSh == 8 ||monthSh == 10){
+                              if(dateSh == 31){
+                              	  monthSh++;
+                              	  dateSh = 0;
+                              }
+                         }else if(monthSh == 2 || monthSh == 4 || monthSh == 6||
+                         	   monthSh == 9 || monthSh == 11){
+                              if(dateSh == 30){
+                              	  monthSh++;
+                              	  dateSh = 0;
+                              }
+                         }
+                         	dateSh++;
+                          //判断星期是否处于临界点
+                  for(var i = 0;i < dayEgArr.length;i++){
+                    if(daySh == dayEgArr[i]){
+
+                          if(i == (dayEgArr.length - 1)){
+                                daySh = dayEgArr[0];
+                             i = dayEgArr.length;                     
+                          }else{
+                                //console.log("ddd");
+                                daySh = dayEgArr[i+1];
+                                //console.log(daySh);
+                                i = dayEgArr.length;
+                          }               
+                        }
+                      }
+                      //将月份转化成英文缩写
+                         monthEg = monthArr[monthSh-1];                       	
+           time = dateSh + "." + monthEg + "." + yearSh;
+                          
+                          timeShow .innerHTML = time;
+                           
+                         dayShow .innerHTML = daySh;
+                          timeSh = timeShow .innerHTML;
+                          daySh = dayShow .innerHTML;
+                          arrTimeSh = timeSh.split(".");
+                          dateSh = arrTimeSh[0];
+                          monthSh = arrTimeSh[1];
+              if(monthSh == "Jan"){
+                   monthSh = 1;
+               }else if(monthSh == "Feb"){
+                   monthSh = 2;
+               }else if(monthSh == "Mar"){
+                   monthSh = 3;
+               }else if(monthSh == "Apr"){
+                   monthSh = 4;
+               }else if(monthSh == "May"){
+                   monthSh = 5;
+               }else if(monthSh == "Jun"){
+                   monthSh = 6;
+               }else if(monthSh == "Jul"){
+                   monthSh = 7;
+               }else if(monthSh == "Aug"){
+                   monthSh = 8;
+               }else if(monthSh == "Sep"){
+                   monthSh = 9;
+               }else if(monthSh == "Oct"){
+                   monthSh = 10;
+               }else if(monthSh == "Nov"){
+                   monthSh = 11;
+               }else if(monthSh == "Dec"){
+                   monthSh = 12;
+               }
+                  daySh = dayShow.innerHTML; 
+                }
+
+               }
+               //时间往前改变
+               	     function getAgoTime(){
+               	       ago.onclick = function(){
+
+               	         //判断月份与日期是否处于临界点
+                         if(monthSh == 1 && dateSh == 1 ){
+                         	 yearSh--;
+                         	 mobthSh = 12;
+                         	 dateSh = 32;
+                         }else if(monthSh == 1 || monthSh == 3 || monthSh == 5||
+                         	   monthSh == 7 || monthSh == 8 ||monthSh == 10){
+                              if(dateSh == 1){
+                              	 if(monthSh == 8){
+                              	  	dateSh = 32;
+                              	  }else{ 	  	
+                              	    dateSh = 31;
+                              	  }
+                              	  monthSh--;
+                              }
+                         }else if(monthSh == 2 || monthSh == 4 || monthSh == 6||
+                         	   monthSh == 9 || monthSh == 11){
+                              if(dateSh == 1){
+                              	  monthSh--;
+                              	  dateSh = 32;
+                              }
+                         }
+                         	dateSh--;
+                          //判断星期是否处于临界点
+                         	for(var i = 0;i < dayEgArr.length;i++){
+                    if(daySh == dayEgArr[i]){
+
+                          if(i == 0){
+                                daySh = dayEgArr[dayEgArr.length - 1];
+                             i = dayEgArr.length;                     
+                          }else{
+                                
+                                daySh = dayEgArr[i-1];
+                                
+                                i = dayEgArr.length;
+                          }               
+                        }
+                      }
+                         monthEg = monthArr[monthSh-1];
+                         	
+                          time = dateSh + "." + monthEg + "." + yearSh;
+                          timeShow .innerHTML = time;                        
+                          dayShow .innerHTML = daySh;
+                          timeSh = timeShow .innerHTML;
+                          daySh = dayShow .innerHTML;
+                          arrTimeSh = timeSh.split(".");
+                          dateSh = arrTimeSh[0];
+                          monthSh = arrTimeSh[1];
+              if(monthSh == "Jan"){
+                   monthSh = 1;
+               }else if(monthSh == "Feb"){
+                   monthSh = 2;
+               }else if(monthSh == "Mar"){
+                   monthSh = 3;
+               }else if(monthSh == "Apr"){
+                   monthSh = 4;
+               }else if(monthSh == "May"){
+                   monthSh = 5;
+               }else if(monthSh == "Jun"){
+                   monthSh = 6;
+               }else if(monthSh == "Jul"){
+                   monthSh = 7;
+               }else if(monthSh == "Aug"){
+                   monthSh = 8;
+               }else if(monthSh == "Sep"){
+                   monthSh = 9;
+               }else if(monthSh == "Oct"){
+                   monthSh = 10;
+               }else if(monthSh == "Nov"){
+                   monthSh = 11;
+               }else if(monthSh == "Dec"){
+                   monthSh = 12;
+               }
+                          daySh = dayShow .innerHTML; 
+                        }
+
+               	    }
+               	 getAgoTime();
+               	 getFutureTime();
+               }
+
+          getTime();   
+     </script>
+</body>
+</html>
